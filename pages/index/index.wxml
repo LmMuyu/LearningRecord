@@ -1,1 +1,1 @@
-<view></view>
+<view><image mode="scaleToFill" src="{{image}}"></image></view>
