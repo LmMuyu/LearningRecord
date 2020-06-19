@@ -1,1 +1,1 @@
-<view><image mode="scaleToFill" src="{{image}}"></image></view>
+<view><index-head-image vue-id="8dd740cc-1" bind:__l="__l"></index-head-image></view>

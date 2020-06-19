@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "目录",
-  "usingComponents": {}
+  "navigationBarTitleText": "主页",
+  "usingComponents": {
+    "index-head-image": "/pages/index/childcomps/IndexHeadImage"
+  }
 }
