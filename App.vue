@@ -34,15 +34,15 @@ export default {
 @import "./common/normalize.css";
 @font-face {
   font-family: "iconfont"; /* project id 1810160 */
-  src: url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.eot");
-  src: url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.eot?#iefix")
+  src: url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.eot");
+  src: url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.eot?#iefix")
       format("embedded-opentype"),
-    url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.woff2")
+    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.woff2")
       format("woff2"),
-    url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.woff") format("woff"),
-    url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.ttf")
+    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.woff") format("woff"),
+    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.ttf")
       format("truetype"),
-    url("https://at.alicdn.com/t/font_1810160_2jt7gjvtctq.svg#iconfont")
+    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.svg#iconfont")
       format("svg");
 }
 </style>

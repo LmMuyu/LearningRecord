@@ -22,6 +22,8 @@ export default {
 <style lang="scss" scoped>
 .flex {
   display: flex;
-  justify-content: center;
+	height: 300rpx;
+	align-items: center;
+	justify-content: center;
 }
 </style>
