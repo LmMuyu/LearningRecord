@@ -34,15 +34,15 @@ export default {
 @import "./common/normalize.css";
 @font-face {
   font-family: "iconfont"; /* project id 1810160 */
-  src: url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.eot");
-  src: url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.eot?#iefix")
+  src: url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.eot");
+  src: url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.eot?#iefix")
       format("embedded-opentype"),
-    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.woff2")
+    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.woff2")
       format("woff2"),
-    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.woff") format("woff"),
-    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.ttf")
+    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.woff") format("woff"),
+    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.ttf")
       format("truetype"),
-    url("https://at.alicdn.com/t/font_1810160_ebgip9umgpk.svg#iconfont")
+    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.svg#iconfont")
       format("svg");
 }
 </style>

@@ -4,15 +4,19 @@
     <IndexHeadImage />
     <!--发布-->
     <IndexCenterRelease />
+    <!--标签-->
+    <IndexLabel />
   </view>
 </template>
 
 <script>
+import IndexLabel from "./childcomps/IndexLabel";
 import IndexHeadImage from "./childcomps/IndexHeadImage.vue";
 import IndexCenterRelease from "./childcomps/IndexCenterRelease";
 
 export default {
   components: {
+    IndexLabel,
     IndexHeadImage,
     IndexCenterRelease
   },
