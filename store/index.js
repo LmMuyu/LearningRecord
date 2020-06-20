@@ -1,18 +1,18 @@
-import Vue from "vue"
-import Vuex from "vuex"
-import actions from "./action.js"
-import mutation from "./mutation"
-import getters from "./getter.js"
+import Vue from "vue";
+import Vuex from "vuex";
+import actions from "./actions";
+import mutations from "./mutations";
+import getters from "./getters";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const state = {
-	
-}
+  HomeImage: "",
+};
 
 export default new Vuex.Store({
-	state,
-	getters,
-	mutation,
-	actions
-})
+  state,
+  getters,
+  mutations,
+  actions,
+});

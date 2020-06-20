@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+}
+
+.flex-jc {
+  display: flex;
+  justify-content: center;
+}
+
+.img-wh-br {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
