@@ -3,7 +3,7 @@
     <!--logo-->
     <IndexHeadImage />
     <!--发布-->
-    <IndexCenterRelease />
+    <IndexCenterRelease @click.native="openWorks" />
     <!--标签-->
     <IndexLabel />
   </view>
@@ -25,7 +25,13 @@ export default {
   },
   created() {},
   onLoad() {},
-  methods: {}
+  methods: {
+    openWorks() {
+      uni.navigateTo({
+        url: "../works/Works"
+      });
+    }
+  }
 };
 </script>
 
