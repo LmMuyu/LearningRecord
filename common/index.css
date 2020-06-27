@@ -30,3 +30,25 @@
 .font-size {
   font-size: 32rpx;
 }
+
+.flex-jb-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-ja-a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box-shadow {
+  box-shadow: 1rpx 0rpx 1rpx #c8c7cc;
+}
+.border-radius{
+  border-radius: 6rpx;
+}
+.padding-16{
+  padding: 16rpx;
+}

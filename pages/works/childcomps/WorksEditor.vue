@@ -1,10 +1,11 @@
 <template>
-  <view class="editor">
+  <view class="editor box-shadow">
     <textarea
-      :value="value"
-      v-model="value"
+      v-model.trim="value"
       :placeholder="title"
       @blur="onTextarea"
+      :maxlength="-1"
+      class="font-size textarea"
     />
   </view>
 </template>
@@ -16,12 +17,12 @@ export default {
     return {
       title: "开始输入",
       value: "",
-      arrval:[]
+      arrval: []
     };
   },
   methods: {
     onTextarea() {
-            
+      console.log(this.value);
     }
   },
   mounted() {
@@ -32,6 +33,9 @@ export default {
 
 <style lang="scss" scoped>
 .editor {
-  border: 1rpx solid black;
+  padding: 16rpx;
+}
+.textarea {
+  width: 100%;
 }
 </style>

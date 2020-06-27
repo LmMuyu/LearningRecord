@@ -3,7 +3,7 @@ import { mapMutations } from "vuex";
 
 export default {
   onLaunch: function() {
-    this.getLogo();
+    // this.getLogo();
   },
   onShow: function() {},
   onHide: function() {
@@ -34,15 +34,15 @@ export default {
 @import "./common/normalize.css";
 @font-face {
   font-family: "iconfont"; /* project id 1810160 */
-  src: url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.eot");
-  src: url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.eot?#iefix")
+  src: url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.eot");
+  src: url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.eot?#iefix")
       format("embedded-opentype"),
-    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.woff2")
+    url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.woff2")
       format("woff2"),
-    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.woff") format("woff"),
-    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.ttf")
+    url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.woff") format("woff"),
+    url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.ttf")
       format("truetype"),
-    url("https://at.alicdn.com/t/font_1810160_oi7ayuunkyb.svg#iconfont")
+    url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.svg#iconfont")
       format("svg");
 }
 </style>

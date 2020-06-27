@@ -1,15 +1,21 @@
 <template>
   <view>
+    <WorkesFeatures />
     <WorksEditor />
+    <WorksLoad />
   </view>
 </template>
 
 <script>
+import WorkesFeatures from "./childcomps/WorkesFeatures";
 import WorksEditor from "./childcomps/WorksEditor";
+import WorksLoad from "./childcomps/WorksLoad";
 
 export default {
   components: {
-    WorksEditor
+    WorkesFeatures,
+    WorksEditor,
+    WorksLoad
   },
   data() {
     return {};
