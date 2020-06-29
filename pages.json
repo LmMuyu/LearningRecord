@@ -10,6 +10,12 @@
 			"style": {
 				"navigationBarTitleText": "发布"
 			}
+		},
+		{
+			"path": "pages/file/File",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
 		}
 	],
 	"globalStyle": {

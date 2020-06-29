@@ -5,7 +5,7 @@
     <!--发布-->
     <IndexCenterRelease @click.native="openWorks" />
     <!--标签-->
-    <IndexLabel />
+    <IndexLabel @openPath="openPath" />
   </view>
 </template>
 
@@ -29,6 +29,11 @@ export default {
     openWorks() {
       uni.navigateTo({
         url: "../works/Works"
+      });
+    },
+    openPath(path) {
+      uni.navigateTo({
+        url: path
       });
     }
   }

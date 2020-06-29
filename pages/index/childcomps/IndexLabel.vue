@@ -2,7 +2,9 @@
   <view class="flex">
     <view class="text" v-for="item in label" :key="item.id">
       <i class="iconfont">&#xe669;</i>
-      <text class="font-size flex-ac">{{ item.title }}</text>
+      <text class="font-size flex-ac" @click="openPath(item.path)">{{
+        item.title
+      }}</text>
     </view>
   </view>
 </template>
@@ -18,10 +20,16 @@ export default {
         },
         {
           id: "file",
-          title: "个人中心"
+          title: "个人中心",
+          path: "../file/File"
         }
       ]
     };
+  },
+  methods: {
+    openPath(path) {
+      this.$emit("openPath",path)
+    }
   }
 };
 </script>

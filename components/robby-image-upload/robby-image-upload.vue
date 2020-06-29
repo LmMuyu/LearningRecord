@@ -15,13 +15,14 @@
           @touchstart="start"
           @touchmove.stop.prevent="move"
           @touchend="stop"
+          mode="aspectFill"
         ></image>
         <view
           v-if="isShowDel"
-          class="imageDel"
+          class="iconfont deleteTu"
           @tap="deleteImage"
           :data-index="index"
-          >x</view
+          >&#xe607;</view
         >
       </view>
       <view v-if="isShowAdd" class="imageUpload" @tap="selectImage">+</view>
@@ -123,7 +124,7 @@ export default {
     }
   },
   methods: {
-    selectImage: function() {
+    selectImage() {
       var _self = this;
       if (!_self.imageList) {
         _self.imageList = [];
@@ -131,7 +132,7 @@ export default {
 
       uni.chooseImage({
         count: _self.limit ? _self.limit - _self.imageList.length : 999,
-        success: function(e) {
+        success: e => {
           let imagePathArr = e.tempFilePaths;
 
           //如果设置了limit限制，在web上count参数无效，这里做判断控制选择的数量是否合要求
@@ -155,93 +156,15 @@ export default {
             }
           }
 
-          //检查服务器地址是否设置，设置即表示图片要上传到服务器
-          if (_self.serverUrl) {
-            uni.showToast({
-              title: "上传进度：0/" + imagePathArr.length,
-              icon: "none",
-              mask: false
-            });
-
-            var remoteIndexStart = _self.imageList.length - imagePathArr.length;
-            var promiseWorkList = [];
-            var keyname = _self.fileKeyName
-              ? _self.fileKeyName
-              : "upload-images";
-            var completeImages = 0;
-
-            for (let i = 0; i < imagePathArr.length; i++) {
-              promiseWorkList.push(
-                new Promise((resolve, reject) => {
-                  let remoteUrlIndex = remoteIndexStart + i;
-                  uni.uploadFile({
-                    url: _self.serverUrl,
-                    fileType: "image",
-                    header: _self.header,
-                    formData: _self.formData,
-                    filePath: imagePathArr[i],
-                    name: keyname,
-                    success: function(res) {
-                      if (res.statusCode === 200) {
-                        if (_self.isDestroyed) {
-                          return;
-                        }
-
-                        completeImages++;
-
-                        if (_self.isshowUploadProgress) {
-                          uni.showToast({
-                            title:
-                              "上传进度：" +
-                              completeImages +
-                              "/" +
-                              imagePathArr.length,
-                            icon: "none",
-                            mask: false,
-                            duration: 500
-                          });
-                        }
-                        console.log("success to upload image: " + res.data);
-                        resolve(res.data);
-                      } else {
-                        console.log("fail to upload image:" + res.data);
-                        reject("fail to upload image:" + remoteUrlIndex);
-                      }
-                    },
-                    fail: function(res) {
-                      console.log("fail to upload image:" + res);
-                      reject("fail to upload image:" + remoteUrlIndex);
-                    }
-                  });
-                })
-              );
-            }
-            Promise.all(promiseWorkList).then(result => {
-              if (_self.isDestroyed) {
-                return;
-              }
-
-              for (let i = 0; i < result.length; i++) {
-                _self.imageList.push(result[i]);
-              }
-
-              _self.$emit("add", {
-                currentImages: imagePathArr,
-                allImages: _self.imageList
-              });
-              _self.$emit("input", _self.imageList);
-            });
-          } else {
-            for (let i = 0; i < imagePathArr.length; i++) {
-              _self.imageList.push(imagePathArr[i]);
-            }
-
-            _self.$emit("add", {
-              currentImages: imagePathArr,
-              allImages: _self.imageList
-            });
-            _self.$emit("input", _self.imageList);
+          for (let i = 0; i < imagePathArr.length; i++) {
+            _self.imageList.push(imagePathArr[i]);
           }
+
+          _self.$emit("add", {
+            currentImages: imagePathArr,
+            allImages: _self.imageList
+          });
+          _self.$emit("input", _self.imageList);
         }
       });
     },
@@ -392,6 +315,12 @@ export default {
 .dragging {
   transform: scale(1.2);
 }
+.deleteTu {
+  position: absolute;
+  top:-9rpx;
+  right: -6rpx;
+  font-size: 40rpx;
+}
 
 .imageUploadList {
   display: flex;
@@ -403,20 +332,7 @@ export default {
   width: 160upx;
   height: 160upx;
   margin: 10upx;
-}
-
-.imageDel {
   position: relative;
-  left: 120upx;
-  bottom: 165upx;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 36upx;
-  text-align: center;
-  line-height: 35upx;
-  border-radius: 17upx;
-  color: white;
-  font-size: 30upx;
-  padding-bottom: 2upx;
 }
 
 .imageItem image,

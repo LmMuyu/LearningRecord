@@ -1,26 +1,42 @@
 <template>
   <view>
     <WorkesFeatures />
-    <WorksEditor />
-    <WorksLoad />
+    <WorksEditor :onTextarea.sync="textarea" />
+    <robbyImageUpload :value="renImage" v-model="renImage" @add="renderImage" />
   </view>
 </template>
 
 <script>
+import robbyImageUpload from "@/components/robby-image-upload/robby-image-upload.vue";
+
 import WorkesFeatures from "./childcomps/WorkesFeatures";
 import WorksEditor from "./childcomps/WorksEditor";
-import WorksLoad from "./childcomps/WorksLoad";
 
 export default {
   components: {
+    robbyImageUpload,
     WorkesFeatures,
-    WorksEditor,
-    WorksLoad
+    WorksEditor
   },
   data() {
-    return {};
+    return {
+      renImage: [], //渲染的图片
+      textarea: ""
+    };
   },
-  watch: {}
+  watch: {},
+  mounted() {
+    this.$once("hook:beforeDestroy", () => {
+      console.log("离开了");
+    });
+  },
+  methods: {
+    renderImage(imgArr) {
+      if (imgArr.length > 0) {
+        this.renImage = imgArr;
+      }
+    }
+  }
 };
 </script>
 

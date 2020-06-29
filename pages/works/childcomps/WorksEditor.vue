@@ -1,7 +1,6 @@
 <template>
   <view class="editor box-shadow">
     <textarea
-      v-model.trim="value"
       :placeholder="title"
       @blur="onTextarea"
       :maxlength="-1"
@@ -15,14 +14,12 @@ export default {
   props: {},
   data() {
     return {
-      title: "开始输入",
-      value: "",
-      arrval: []
+      title: "开始输入"
     };
   },
   methods: {
-    onTextarea() {
-      console.log(this.value);
+    onTextarea(e) {
+      this.$emit("update:onTextarea",e.target.value)
     }
   },
   mounted() {

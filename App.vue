@@ -32,6 +32,10 @@ export default {
 /*每个页面公共css */
 @import "./common/index.css";
 @import "./common/normalize.css";
+/**colorui */
+@import "./static/css/animation.css";
+@import "./static/css/icon.css";
+@import "./static/css/main.css";
 @font-face {
   font-family: "iconfont"; /* project id 1810160 */
   src: url("https://at.alicdn.com/t/font_1810160_ry3xyghrjqd.eot");
