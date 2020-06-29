@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "主页",
   "usingComponents": {
+    "index-label": "/pages/index/childcomps/IndexLabel",
     "index-head-image": "/pages/index/childcomps/IndexHeadImage",
     "index-center-release": "/pages/index/childcomps/IndexCenterRelease"
   }

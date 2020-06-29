@@ -1,0 +1,1 @@
+<view class="editor box-shadow data-v-199ddd2e"><textarea class="font-size textarea data-v-199ddd2e" placeholder="{{title}}" maxlength="{{-1}}" data-event-opts="{{[['blur',[['onTextarea',['$event']]]]]}}" bindblur="__e"></textarea></view>

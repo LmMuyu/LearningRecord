@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/works/Works",
+    "pages/file/File"
   ],
   "subPackages": [],
   "window": {
@@ -10,5 +12,5 @@
     "backgroundColor": "#F8F8F8"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap10.json"
+  "sitemapLocation": "sitemap46.json"
 }
