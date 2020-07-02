@@ -2,19 +2,28 @@
   <view>
     <FileInfo />
     <FileLabel :list="list" />
+
+    <!--滑屏-->
+    <FileShow>
+      <template v-slot="{ listData }">
+        <view>
+          {{ listData }}
+        </view>
+      </template>
+    </FileShow>
   </view>
 </template>
 
 <script>
 import FileLabel from "./childcomps/FileLabel";
-import FIleShow from "./childcomps/FIleShow";
+import FileShow from "./childcomps/FileShow";
 import FileInfo from "./childcomps/FileInfo";
 
 export default {
   components: {
     FileLabel,
     FileInfo,
-    FIleShow
+    FileShow
   },
   data() {
     return {
