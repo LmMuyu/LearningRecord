@@ -1,6 +1,24 @@
 {
   "dependencies": {
     "swiper": "^5.4.5",
-    "vue-awesome-swiper": "^4.1.1"
-  }
+    "vue-awesome-swiper": "^4.1.1",
+    "vuex": "^3.5.1"
+  },
+  "name": "learningrecord",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LmMuyu/LearningRecord.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LmMuyu/LearningRecord/issues"
+  },
+  "homepage": "https://github.com/LmMuyu/LearningRecord#readme",
+  "description": ""
 }
